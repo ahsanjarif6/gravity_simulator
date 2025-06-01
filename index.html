@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gravity Simulator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0d1117;
+      color: #c9d1d9;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+    }
+
+    div {
+      margin-bottom: 20px;
+      background: #161b22;
+      padding: 15px 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    label {
+      margin-right: 10px;
+      font-size: 16px;
+    }
+
+    select, button {
+      font-size: 16px;
+      padding: 6px 12px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+    }
+
+    select {
+      background: #30363d;
+      color: #c9d1d9;
+    }
+
+    button {
+      background-color: #238636;
+      color: white;
+      cursor: pointer;
+      margin-left: 10px;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #2ea043;
+    }
+
+    canvas {
+        border: 2px solid #30363d;
+        border-radius: 10px;
+        background: url('stars.jpg') no-repeat center center;
+        background-size: cover;
+      }
+      
+  </style>
+</head>
+<body>
+  <div>
+    <label for="numBodies">Choose number of bodies:</label>
+    <select id="numBodies">
+      <option value="2">2</option>
+      <option value="3" selected>3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    <button id="startBtn">Start Simulation</button>
+  </div>
+  <canvas id="space" width="750" height="550"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
